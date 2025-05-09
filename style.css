@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-one {
+    background-image: url('img/bg1.jpg');
+}
+
+.bg-two {
+    background-image: url('img/bg2.jpg');
+}
+
+.bg-three {
+    background-image: url('img/bg3.jpg');
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.normal-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
