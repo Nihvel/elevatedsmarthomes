@@ -1,63 +1,274 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-li {
-    text-align: left;
+h1, h2, h3 {
+  margin: 0.5em 0;
 }
 
-.parallax-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+p {
+  line-height: 1.6;
 }
 
-.bg-one {
-    background-image: url('img/bg1.jpg');
+/* Parallax Sections */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
-.bg-two {
-    background-image: url('img/bg2.jpg');
+.parallax .content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 800px;
 }
 
-.bg-three {
-    background-image: url('img/bg3.jpg');
+/* Specific Backgrounds */
+.main {
+  background-image: url('./img/bg1.jpg');
 }
 
-.content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 10px;
+.services-bg {
+  background-image: url('./img/bg2.jpg');
+}
+
+.why-bg {
+  background-image: url('./img/bg3.jpg');
+}
+
+.testimonials-bg {
+  background-image: url('./img/bg4.jpg');
+}
+
+/* Normal Sections */
+.normal {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .normal-section {
-    padding: 80px;
-    text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
-    justify-content: center;
+  background-color: #fff;
+  padding: 4em 2em;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+/* Two-column container inside a normal-section */
+.two-column-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+/* Individual columns */
+.column-left,
+.column-right {
+  flex: 1 1 45%;
+  box-sizing: border-box;
+}
+
+/* Image placeholder */
+.image-placeholder {
+  width: 100%;
+  height: 400px; /* Increased height for better display */
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Style for the image inside the placeholder */
+.image-placeholder img {
+    width: 100%;
+    height: auto; /* Changed to auto to maintain aspect ratio */
+    max-height: 100%; /* Ensure it doesn't exceed the container height */
+    object-fit: contain; /* Changed to contain to fit the image within the container */
+}
+
+/* Media query for smaller screens (e.g., iPhones) */
+@media (max-width: 768px) {
+  .two-column-container {
+    flex-direction: column;
     align-items: center;
+  }
+
+  .column-left,
+  .column-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .image-placeholder {
+    height: 300px; /* Adjusted height for smaller screens */
+  }
 }
 
-.footer {
-	width: 100%;
-	background: #000;
-	text-align: center;
-	padding: 10px 0px;
-	color: #fff;
+/* List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
 }
 
-.footer span {
-	color: #fff;
-	padding: 10px 0px;
+li {
+  margin: 1em 0;
+  font-size: 1.1em;
+}
+
+/* Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.service {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 250px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.service h3 {
+  margin-top: 0;
+}
+
+/* Testimonials */
+blockquote {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 1em;
+  margin: 1em auto;
+  border-left: 5px solid #ccc;
+  max-width: 600px;
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+/* Social Contact Container */
+.social-contact-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically by default */
+  gap: 1.5em; /* Space between buttons */
+  margin-top: 2em;
+  align-items: center; /* Center buttons horizontally */
+}
+
+/* Social Buttons */
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.5em;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Full width on small screens */
+  max-width: 300px; /* Limit max width for desktop */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-button i {
+  margin-right: 0.8em;
+  font-size: 1.3em;
+}
+
+/* WhatsApp Button Style */
+.whatsapp-button {
+  background-color: #25D366;
+}
+
+.whatsapp-button:hover {
+  background-color: #1DA851;
+  transform: translateY(-2px);
+}
+
+/* Instagram Button Style */
+.instagram-button {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Email text style */
+.contact-email {
+  margin-top: 2em;
+  font-size: 1em;
+  color: #555;
+}
+
+.contact-email a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 769px) {
+  .social-contact-container {
+    flex-direction: row; /* Arrange buttons horizontally on larger screens */
+    justify-content: center; /* Center them when horizontal */
+  }
+
+  .social-button {
+    width: auto; /* Allow buttons to size based on content */
+    padding: 0.8em 2em; /* Slightly more padding for desktop */
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 2em 0;
+  font-size: 0.9em;
+  color: #666;
 }
