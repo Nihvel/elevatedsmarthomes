@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impressum | Elevated Smart Homes</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- Header / Menu -->
+  <header>
+    <div class="nav-container">
+      <div class="logo"><img src="./img/esh.png" width="160" height="72"></div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./impressum.html">Impressum</a></li>
+          <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="normal">
+      <div class="normal-section">
+        <h1>Impressum</h1>
+        <p><strong>Owner:</strong> Juri Calleri</p>
+        <p><strong>Address:</strong> Vienna, Austria</p>
+        <p><strong>Email:</strong> <a href="mailto:elevatedsmarthomes@proton.me">elevatedsmarthomes@proton.me</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-main">
+      <p>&copy; 2025 Elevated Smart Homes</p>
+      <p>A project by Juri Calleri - Crafted with AI & open source ❤️</p>
+    </div>
+  </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>
