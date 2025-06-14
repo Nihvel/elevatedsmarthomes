@@ -213,7 +213,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #ccc;
+  border: 2px #bbb;
   color: #777;
   font-style: italic;
   text-align: center;
