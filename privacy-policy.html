@@ -12,27 +12,73 @@
   <!-- Header / Menu -->
   <header>
     <div class="nav-container">
-      <div class="logo"><img src="./img/esh.png" width="160" height="72"></div>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <nav id="nav-menu">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./impressum.html">Impressum</a></li>
-          <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </nav>
+      <div class="logo">
+        <a href="./index.html#home">
+          <img src="./img/esh.png" width="160" height="72">
+        </a>
+      </div>
+      <div class="nav-right">
+        <a href="./index.html#contact" class="get-in-touch-btn">Get in touch</a>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="./index.html#about-us">About Us</a></li>
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./index.html#the-process">The Process</a></li>
+            <li><a href="./index.html#our-approach">Our Approach</a></li>
+            <li><a href="./index.html#integrations">Integrations</a></li>
+            <li><a href="./index.html#testimonials">Testimonials</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="normal">
       <div class="normal-section">
-        <h1>Privacy Policy</h1>
-        <p>This website does not collect any personal data. It does not use cookies, tracking scripts, analytics tools,
-          or third-party embeds that could transfer data.</p>
-        <p>All fonts are hosted locally to ensure no data is shared with external services.</p>
-        <p>For any privacy inquiries, contact Juri Calleri at <a
-            href="mailto:elevatedsmarthomes@proton.me">elevatedsmarthomes@proton.me</a>.</p>
+        <h1>Cookie Policy & Data Privacy Statement</h1>
+        <p>Welcome to <strong>Elevated Smart Homes</strong>. We believe in absolute transparency regarding your privacy.
+        </p>
+
+        <p>This website is designed with a fundamental commitment to not collect any personal data from its visitors.
+          Juri Calleri, the operator of Elevated Smart Homes, ensures that your visit remains private.</p>
+
+        <h2>Here’s what that means for you:</h2>
+        <ul>
+          <li><strong>No Personal Data Collection:</strong> We do not collect, store, or process any personal data from
+            you, such as your IP address, Browse habits, or demographic information.</li>
+          <li><strong>No Tracking Technologies:</strong> We do not use cookies, web beacons, tracking pixels, or any
+            other tracking technologies to monitor your activity on this site or across other websites.</li>
+          <li><strong>No Analytics:</strong> We do not use analytics tools (like Google Analytics, Matomo, etc.) that
+            would collect information about your visit.</li>
+          <li><strong>No Third-Party Embeds:</strong> This website does not embed content from third-party services
+            (such as social media feeds, video players, or external maps) that could potentially transfer data to those
+            third parties.</li>
+          <li><strong>Locally Hosted Assets:</strong> All fonts, scripts, and other design elements are hosted directly
+            on our server. This ensures that no data is shared with external content delivery networks (CDNs) or font
+            providers.</li>
+        </ul>
+
+        <h2>Regarding "Cookies" and GitHub Pages:</h2>
+        <p>This website, hosted on GitHub Pages, is designed not to set any cookies from our side. However, GitHub, as
+          the hosting provider, may use essential, technically necessary cookies for the operation and security of their
+          platform (e.g., for load balancing or security features). These are related to the hosting service itself and
+          are not used by us to track or identify you. As these are outside of our direct control, we recommend
+          reviewing GitHub's privacy policy for more details on their infrastructure practices.</p>
+
+        <h2>Your Data, Your Control:</h2>
+        <p>Since we collect no personal data, there is no data of yours for us to store, process, or share. Your visit
+          to this website remains entirely private.</p>
+
+        <h2>Contact for Privacy Inquiries:</h2>
+        <p>For any questions or concerns regarding privacy on this website, please feel free to contact:</p>
+        <p>
+          Juri Calleri<br>
+          Elevated Smart Homes<br>
+          <a href="mailto:elevatedsmarthomes@proton.me">elevatedsmarthomes@proton.me</a><br>
+          Vienna, Austria
+        </p>
       </div>
     </section>
   </main>
@@ -43,22 +89,26 @@
       <p>&copy; 2025 Elevated Smart Homes</p>
       <p>A project by Juri Calleri - Crafted with AI & open source ❤️</p>
     </div>
+
+    <div class="footer-legal">
+      <p><strong><a href="./impressum.html">Impressum</a> | <a href="./terms-and-conditions.html">Terms & Condition</a> | <a href="./privacy-policy.html">Cookie & Privacy Policy</a></strong></p>
+    </div>
   </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
 
-  document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-      navMenu.classList.remove('show');
-    }
-  });
-</script>
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('show');
+      }
+    });
+  </script>
 
 </body>
 
